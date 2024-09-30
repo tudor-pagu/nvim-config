@@ -9,6 +9,8 @@ return {
             ["<Tab>"] = require("cmp").mapping.disable,
             ["<m-enter>"] = require("cmp").mapping.confirm(),
             ["<c-space>"] = require("cmp").mapping.complete(),
+            ["<down>"] = require("cmp").mapping.select_next_item(),
+            ["<up>"] = require("cmp").mapping.select_prev_item(),
         }
         return opts
     end,

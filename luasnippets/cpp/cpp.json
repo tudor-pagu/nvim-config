@@ -1,0 +1,12 @@
+{
+    "Competiteve_Programming_starter" {
+        "prefix" : "cpst",
+        "body" : [
+        "#include<bits/stdc++.h",
+        "using namespace std;",
+        "int main() {",
+        "",
+        "}"
+    ]
+    }
+}

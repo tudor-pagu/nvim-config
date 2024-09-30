@@ -4,11 +4,28 @@
 
 -- Function to build the current file
 
-vim.keymap.set("n", "<f3>", "<cmd>w<cr><cmd>!g++ % -o %< && %<<cr>")
+vim.keymap.set("n", "<f2>", function()
+    vim.api.nvim_command("w")
+    vim.api.nvim_command([[!g++ -DLOCAL %:p -o %:p:r]])
+    print("build finished")
+end)
+
+vim.keymap.set("n", "<f3>", function()
+    vim.api.nvim_command("w")
+    vim.api.nvim_command([[!g++ -DLOCAL %:p -o %:p:r]])
+    vim.api.nvim_command([[! %:p:r]])
+end)
 vim.keymap.set("n", "<f4>", function()
     vim.api.nvim_command("w")
-    vim.api.nvim_command("!g++ -g % -o %<")
+    vim.api.nvim_command("!g++ -DLOCAL -g %:p -o %:p:r")
     local dap = require("dap")
-    dap.configurations.cpp[1].program = vim.fn.expand("%<")
+    dap.configurations.cpp[1].program = vim.fn.expand("%:p:r")
     dap.continue()
+end)
+
+vim.keymap.set("n", "<f8>", function()
+    require("dap").step_over()
+end)
+vim.keymap.set("n", "<f9>", function()
+    require("dap").continue()
 end)
