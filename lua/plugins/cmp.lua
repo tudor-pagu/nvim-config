@@ -7,6 +7,7 @@ return {
         opts.mapping = {
             ["<CR>"] = require("cmp").mapping.disable,
             ["<Tab>"] = require("cmp").mapping.confirm(),
+            ["<c-space>"] = require("cmp").mapping.complete(),
         }
         return opts
     end,
