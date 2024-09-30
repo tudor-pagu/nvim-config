@@ -29,3 +29,5 @@ end)
 vim.keymap.set("n", "<f9>", function()
     require("dap").continue()
 end)
+
+vim.keymap.set("n", "<c-[", "<esc>")
