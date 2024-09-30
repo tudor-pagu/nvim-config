@@ -6,7 +6,8 @@ return {
         opts.preselect = require("cmp").PreselectMode.None
         opts.mapping = {
             ["<CR>"] = require("cmp").mapping.disable,
-            ["<Tab>"] = require("cmp").mapping.confirm(),
+            ["<Tab>"] = require("cmp").mapping.disable,
+            ["<m-enter>"] = require("cmp").mapping.confirm(),
             ["<c-space>"] = require("cmp").mapping.complete(),
         }
         return opts

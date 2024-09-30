@@ -2,6 +2,6 @@ return {
     "akinsho/toggleterm.nvim",
     version = "*",
     config = {
-        open_mapping = "<m-t>",
+        open_mapping = "<leader>t",
     },
 }
