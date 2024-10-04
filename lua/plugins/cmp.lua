@@ -11,7 +11,7 @@ return {
             ["<c-space>"] = require("cmp").mapping.complete(),
             ["<m-down>"] = require("cmp").mapping.select_next_item(),
             ["<m-up>"] = require("cmp").mapping.select_prev_item(),
-            ["<c-;>"] = require("cmp").mapping.abort(),
+            ["<c-]>"] = require("cmp").mapping.abort(),
         }
         return opts
     end,
