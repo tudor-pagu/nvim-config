@@ -23,5 +23,16 @@ return {
             },
         },
         disable_frontmatter = true,
+        -- Optional, customize how note IDs are generated given an optional title.
+        ---@param title string|?
+        ---@return string
+        note_id_func = function(title)
+            if title ~= nil then
+                return title
+            else
+                return "untitled"
+            end
+        end,
+        wiki_link_func = "use_alias_only",
     },
 }
