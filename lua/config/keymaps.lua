@@ -34,3 +34,4 @@ vim.keymap.set({ "n", "i" }, "<f9>", function()
 end)
 
 vim.keymap.set("n", "<c-[", "<esc>")
+vim.keymap.set("i", "jk", "<esc>")
