@@ -1,6 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     opts = {
+        autoformat = false,
         servers = {
             -- Ensure mason installs the server
             clangd = {
