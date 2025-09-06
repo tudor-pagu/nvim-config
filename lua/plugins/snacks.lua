@@ -3,7 +3,7 @@ return {
     opts = {
         styles = {
             terminal = {
-                position = "right",
+                position = "bottom",
             },
         },
     },
