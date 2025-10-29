@@ -35,3 +35,21 @@ end)
 
 vim.keymap.set("n", "<c-[", "<esc>")
 vim.keymap.set("i", "jk", "<esc>")
+
+
+-- return {
+--   {
+--     "LazyVim/LazyVim",
+--     keys = {
+--       -- Replace <leader><leader> with your behavior (CWD instead of project root)
+--       {
+--         "<leader><leader>", function()
+--             local path = vim.api.nvim_exec2("pwd", { output = true }).output
+--             print(path)
+--             vim.cmd(string.format("Telescope find_files cwd=%s", path)) end,
+--         desc = "Find Files (Custom)",
+--       },
+--     },
+--   },
+-- }
+

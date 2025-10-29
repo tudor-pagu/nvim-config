@@ -18,5 +18,8 @@ return {
       end,
       group = nvim_metals_group,
     })
+    vim.keymap.set("n", "<leader>ma", function()
+      require("metals").initialize_or_attach(metals_config)
+    end, { desc = "Metals: initialize/attach" })
   end
 }
