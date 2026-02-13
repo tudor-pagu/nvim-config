@@ -8,5 +8,8 @@ return {
             },
         },
     },
-    keys = { { "<leader><space>", false } },
+    keys = {
+      { "<leader><space>", false },
+      { "<leader><leader>", false }
+    },
 }
